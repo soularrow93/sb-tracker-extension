@@ -21,6 +21,21 @@
   </section>
 
   <section class="card">
+    <div class="row between"><span>Cashout target: <b id="cashoutLabel">500</b> SB</span><span id="cashoutLeft"></span></div>
+    <div class="bar"><div id="cashoutBar"></div></div>
+    <div class="row between small"><span id="cashoutEta"></span></div>
+    <div class="row">
+      <label>Target <input type="number" id="cashoutInput" min="1" value="500"></label>
+      <button id="saveCashout">Set</button>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Stats</h2>
+    <div id="stats" class="small"></div>
+  </section>
+
+  <section class="card">
     <h2>Log earnings</h2>
     <div class="row">
       <input type="number" id="sbAmount" placeholder="SB" min="1">
@@ -35,7 +50,14 @@
       <button id="addEntry">Add</button>
     </div>
     <ul id="entries"></ul>
-    <div class="row between small"><span id="rateSummary"></span><button id="exportBtn">Export JSON</button></div>
+    <div class="row between small">
+      <span id="rateSummary"></span>
+      <span>
+        <button id="exportBtn">Export</button>
+        <button id="importBtn">Import</button>
+        <input type="file" id="importFile" accept="application/json" hidden>
+      </span>
+    </div>
   </section>
 
   <section class="card">

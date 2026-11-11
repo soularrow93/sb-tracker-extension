@@ -1,4 +1,9 @@
-# SB Tracker — Swagbucks Earnings Manager (v1.0)
+# SB Tracker — Swagbucks Earnings Manager (v1.1)
+
+**New in v1.1:** cashout countdown with ETA at your current pace, 7/30-day
+and per-source stats, JSON import (restore your export), local-time day
+boundaries (your "today" now matches your wall clock), safer rendering of
+notes, and proper extension icons.
 
 A manual tracker for Swagbucks users. It helps you MANAGE your earning:
 daily goal + streak, an SB log with your real SB/hour rate, and a survey

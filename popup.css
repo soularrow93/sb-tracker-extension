@@ -13,6 +13,7 @@ button { cursor: pointer; background: #1f6feb; border-color: #1f6feb; color: #ff
 button:hover { background: #388bfd; }
 .bar { height: 10px; background: #0d1117; border-radius: 5px; overflow: hidden; }
 #goalBar { height: 100%; width: 0%; background: #3fb950; transition: width .3s; }
+#cashoutBar { height: 100%; width: 0%; background: #f0b93c; transition: width .3s; }
 ul { list-style: none; margin: 6px 0 0; padding: 0; max-height: 140px; overflow-y: auto; }
 li { display: flex; justify-content: space-between; font-size: 12px; padding: 3px 0; border-bottom: 1px solid #26303c; }
 li .del { background: none; border: none; color: #f85149; padding: 0 2px; }
