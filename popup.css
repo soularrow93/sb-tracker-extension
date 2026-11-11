@@ -1,0 +1,19 @@
+body { font-family: system-ui, sans-serif; width: 340px; margin: 0; padding: 10px; background: #101418; color: #e8edf2; }
+h1 { font-size: 16px; margin: 0; }
+h2 { font-size: 13px; margin: 0 0 6px; }
+header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 8px; }
+.card { background: #1a2129; border-radius: 8px; padding: 8px; margin-bottom: 8px; }
+.row { display: flex; gap: 6px; align-items: center; margin: 4px 0; flex-wrap: wrap; }
+.row.between { justify-content: space-between; }
+.small { font-size: 11px; color: #9fb0c3; }
+input, select, button { background: #0d1117; color: #e8edf2; border: 1px solid #33404f; border-radius: 5px; padding: 4px 6px; font-size: 12px; }
+input[type="number"] { width: 70px; }
+input[type="text"] { flex: 1; min-width: 90px; }
+button { cursor: pointer; background: #1f6feb; border-color: #1f6feb; color: #fff; }
+button:hover { background: #388bfd; }
+.bar { height: 10px; background: #0d1117; border-radius: 5px; overflow: hidden; }
+#goalBar { height: 100%; width: 0%; background: #3fb950; transition: width .3s; }
+ul { list-style: none; margin: 6px 0 0; padding: 0; max-height: 140px; overflow-y: auto; }
+li { display: flex; justify-content: space-between; font-size: 12px; padding: 3px 0; border-bottom: 1px solid #26303c; }
+li .del { background: none; border: none; color: #f85149; padding: 0 2px; }
+footer { font-size: 10px; color: #77879a; }

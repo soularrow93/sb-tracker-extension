@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header>
+    <h1>SB Tracker</h1>
+    <div id="balanceLine">Balance: <b id="balance">0</b> SB</div>
+  </header>
+
+  <section class="card">
+    <div class="row between"><span>Today: <b id="todayTotal">0</b> SB</span><span>Goal: <b id="goalLabel">100</b> SB</span></div>
+    <div class="bar"><div id="goalBar"></div></div>
+    <div class="row between small"><span id="streak">Streak: 0 days</span><span id="todayRate"></span></div>
+    <div class="row">
+      <label>Daily goal <input type="number" id="goalInput" min="1" value="100"></label>
+      <button id="saveGoal">Set</button>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Log earnings</h2>
+    <div class="row">
+      <input type="number" id="sbAmount" placeholder="SB" min="1">
+      <input type="number" id="sbMinutes" placeholder="minutes" min="0">
+      <select id="sbSource">
+        <option value="survey">Survey</option>
+        <option value="daily">Daily list</option>
+        <option value="offer">Offer</option>
+        <option value="game">Game</option>
+        <option value="other">Other</option>
+      </select>
+      <button id="addEntry">Add</button>
+    </div>
+    <ul id="entries"></ul>
+    <div class="row between small"><span id="rateSummary"></span><button id="exportBtn">Export JSON</button></div>
+  </section>
+
+  <section class="card">
+    <h2>Survey queue (ranked by SB/min)</h2>
+    <div class="row">
+      <input type="number" id="qSb" placeholder="SB" min="1">
+      <input type="number" id="qMin" placeholder="min" min="1">
+      <input type="text" id="qNote" placeholder="note (optional)">
+      <button id="addQueue">Add</button>
+    </div>
+    <ul id="queue"></ul>
+  </section>
+
+  <footer>Manual tracker only — it never touches swagbucks.com, never clicks, never answers. Your data stays in your browser.</footer>
+  <script src="popup.js"></script>
+</body>
+</html>
