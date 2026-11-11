@@ -14,6 +14,10 @@ button:hover { background: #388bfd; }
 .bar { height: 10px; background: #0d1117; border-radius: 5px; overflow: hidden; }
 #goalBar { height: 100%; width: 0%; background: #3fb950; transition: width .3s; }
 #cashoutBar { height: 100%; width: 0%; background: #f0b93c; transition: width .3s; }
+.timer { font-size: 22px; font-weight: bold; font-variant-numeric: tabular-nums; }
+.warn { color: #f0b93c; margin: 4px 0; }
+textarea { width: 100%; box-sizing: border-box; background: #0d1117; border: 1px solid #30363d; border-radius: 6px; color: #e6edf3; padding: 6px; font: inherit; font-size: 12px; }
+input[type="date"], input[type="checkbox"] { accent-color: #3fb950; }
 ul { list-style: none; margin: 6px 0 0; padding: 0; max-height: 140px; overflow-y: auto; }
 li { display: flex; justify-content: space-between; font-size: 12px; padding: 3px 0; border-bottom: 1px solid #26303c; }
 li .del { background: none; border: none; color: #f85149; padding: 0 2px; }

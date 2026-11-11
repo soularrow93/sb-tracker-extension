@@ -7,17 +7,30 @@
 <body>
   <header>
     <h1>SB Tracker</h1>
-    <div id="balanceLine">Balance: <b id="balance">0</b> SB</div>
+    <div id="balanceLine">Balance: <b id="balance">0</b> SB <span id="pendingLine" class="small"></span></div>
   </header>
 
   <section class="card">
     <div class="row between"><span>Today: <b id="todayTotal">0</b> SB</span><span>Goal: <b id="goalLabel">100</b> SB</span></div>
     <div class="bar"><div id="goalBar"></div></div>
     <div class="row between small"><span id="streak">Streak: 0 days</span><span id="todayRate"></span></div>
+    <div id="streakWarn" class="small warn"></div>
     <div class="row">
       <label>Daily goal <input type="number" id="goalInput" min="1" value="100"></label>
       <button id="saveGoal">Set</button>
     </div>
+  </section>
+
+  <section class="card">
+    <h2>Daily routine <span id="routineBonus" class="small"></span></h2>
+    <ul id="routine"></ul>
+    <div class="small">SB day resets at midnight Pacific = <b>4:00 AM your time</b>. To-Do bonus doesn't count toward the Daily Goal.</div>
+  </section>
+
+  <section class="card">
+    <h2>My screener profile <button id="copyProfile" class="small">Copy</button></h2>
+    <div id="profileCard" class="small"></div>
+    <div class="small">Your real answers, on one card — for answering screeners fast, yourself.</div>
   </section>
 
   <section class="card">
@@ -26,8 +39,22 @@
     <div class="row between small"><span id="cashoutEta"></span></div>
     <div class="row">
       <label>Target <input type="number" id="cashoutInput" min="1" value="500"></label>
+      <label>By <input type="date" id="cashoutDate"></label>
       <button id="saveCashout">Set</button>
     </div>
+    <div id="plannerLine" class="small"></div>
+  </section>
+
+  <section class="card">
+    <h2>Focus session</h2>
+    <div class="row between">
+      <span id="timerDisplay" class="timer">00:00</span>
+      <span>
+        <button id="timerStart">Start</button>
+        <button id="timerStop" disabled>Stop &amp; log</button>
+      </span>
+    </div>
+    <div class="small">Work manually; when you stop, enter the SB you earned and it logs with the session minutes.</div>
   </section>
 
   <section class="card">
@@ -47,6 +74,7 @@
         <option value="game">Game</option>
         <option value="other">Other</option>
       </select>
+      <label class="small"><input type="checkbox" id="sbPending"> pending</label>
       <button id="addEntry">Add</button>
     </div>
     <ul id="entries"></ul>
@@ -68,7 +96,14 @@
       <input type="text" id="qNote" placeholder="note (optional)">
       <button id="addQueue">Add</button>
     </div>
+    <div class="row small">
+      <label>Hide under <input type="number" id="cutoffInput" min="0" value="0"> SB/min</label>
+      <button id="saveCutoff">Set</button>
+    </div>
     <ul id="queue"></ul>
+    <h2>Avoid list</h2>
+    <textarea id="avoidText" rows="2" placeholder="Providers that eject you late, bad offers... one per line"></textarea>
+    <div class="row"><button id="saveAvoid">Save avoid list</button></div>
   </section>
 
   <footer>Manual tracker only — it never touches swagbucks.com, never clicks, never answers. Your data stays in your browser.</footer>
